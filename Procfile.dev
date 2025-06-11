@@ -1,0 +1,6 @@
+web: bin/rails server -p $PORT
+css: bin/rails tailwindcss:watch
+worker: bundle exec rake solid_queue:start
+
+# worker: SOLID_QUEUE_CONFIG=config/jobs.yml bundle exec rake solid_queue:start
+# stripe: stripe listen --forward-to localhost:3000/webhooks/stripecss: bin/rails tailwindcss:watch
