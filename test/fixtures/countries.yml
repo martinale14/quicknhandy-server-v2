@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+colombia:
+  name: Colombia
+  code: COL
+
+united_states:
+  name: United States
+  code: USA

@@ -1,7 +1,13 @@
 class User < ApplicationRecord
-  has_secure_password
-  has_secure_password :temporary_password, validations: false
   rolify
 
-  has_many :sessions
+  include User::Authenticable
+  include User::Sessionable
+
+  has_many :addresses
+
+  validates :email, :password, :first_name, :last_name,
+            :time_zone, :zip_code, :birthday, :phone_number,
+            :country_code, presence: true
+  validates :email, uniqueness: true
 end

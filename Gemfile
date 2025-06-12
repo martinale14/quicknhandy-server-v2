@@ -6,6 +6,8 @@ gem "bcrypt", "~> 3.1", ">= 3.1.20"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem "csv", "~> 3.3", ">= 3.3.5"
+
 gem "geokit-rails", "~> 2.5"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
@@ -20,6 +22,10 @@ gem "madmin", "~> 2.0", ">= 2.0.2"
 
 gem "mobility", "~> 1.3", ">= 1.3.2"
 
+gem "mobility-actiontext", "~> 1.1", ">= 1.1.1"
+
+gem "money-rails", "~> 1.15"
+
 gem "pagy", "~> 9.3", ">= 9.3.4"
 
 gem "pg", "~> 1.5", ">= 1.5.9"
@@ -33,6 +39,8 @@ gem "rails", "~> 8.0.2"
 
 gem "redis-objects", "~> 1.7"
 
+gem "rgeo-geojson", "~> 2.2"
+
 gem "rolify", "~> 6.0", ">= 6.0.1"
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
@@ -40,6 +48,8 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_queue_dashboard", "~> 0.2.0"
 gem "solid_cable"
+
+gem "securerandom", "~> 0.4.1"
 # Hotwire"s modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
@@ -52,13 +62,14 @@ gem "thruster", require: false
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development, :test do
+  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  gem "brakeman", require: false
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
   gem "dotenv", "~> 3.1", ">= 3.1.8"
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", require: false
 
+  gem "faker", "~> 3.5", ">= 3.5.1"
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end

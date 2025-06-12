@@ -1,0 +1,10 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+desk_assembly:
+  title:
+    en: "Desk Assembly"
+    es:
+  category_id: 1
+  subcategory: handy_ass
+  banner_image: "https://firebasestorage.googleapis.com/v0/b/quicknhandy-ab215.appspot.com/o/service_types%2Fhandyman%2Fassembly%2Fdesk_assembly.jpg?alt=media&token=e998d946-0c09-4765-80a6-d1754cd48197"
+  icon: "https://firebasestorage.googleapis.com/v0/b/quicknhandy-ab215.appspot.com/o/service_types%2Ficons%2Ficon-11.svg?alt=media&token=50275a55-f0f7-4f73-8ba4-0494cc40e908"

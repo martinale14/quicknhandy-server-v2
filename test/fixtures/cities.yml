@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+palmira:
+  name: Palmira
+  code: COQPI
+  country: colombia
+
+bogota:
+  name: Bogotá
+  code: COBOG
+  country: colombia
+
+sogamoso:
+  name: Sogamoso
+  code: COSOX
+  country: colombia
+
+orlando:
+  name: Orlando
+  code: USORL
+  country: united_states
+
+miami:
+  name: Miami
+  code: USMIA
+  country: united_states
+
+new_york:
+  name: New York
+  code: USNYC
+  country: united_states

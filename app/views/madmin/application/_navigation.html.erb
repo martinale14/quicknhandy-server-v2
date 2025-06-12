@@ -8,7 +8,11 @@
 
   <% Madmin.menu.render do |item| %>
     <% if item.url %>
-      <%= nav_link_to item.label, item.url, starts_with: item.url %>
+      <% if item.url == madmin_categories_path %>
+        <%= nav_link_to item.label, madmin_categories_path(scope: :parents), starts_with: item.url %>
+      <% else %>
+        <%= nav_link_to item.label, item.url, starts_with: item.url %>
+      <% end %>
     <% else %>
       <h4><%= item.label %></h4>
     <% end %>

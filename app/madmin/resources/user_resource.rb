@@ -2,9 +2,9 @@ class UserResource < Madmin::Resource
   # Attributes
   attribute :id, form: false
   attribute :profile_picture
-  attribute :is_suspended
+  attribute :suspended_indefinitely
   attribute :active
-  attribute :email
+  attribute :email, index: true
   attribute :reset_password_token, form: false
   attribute :reset_password_token_sent_at, form: false
   attribute :first_name
@@ -15,16 +15,13 @@ class UserResource < Madmin::Resource
   attribute :birthday
   attribute :phone_number
   attribute :country_code
+  attribute :suspended_until
   attribute :suspention_message
   attribute :created_at, form: false
   attribute :updated_at, form: false
   attribute :password, index: false, show: false, form: false
   attribute :password_confirmation, index: false, show: false, form: false
   attribute :temporary_password, index: false, form: false
-
-  def self.actions
-    super - [ :new, :create ]
-  end
 
   # Associations
   attribute :roles

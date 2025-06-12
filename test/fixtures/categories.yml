@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+handy:
+  id: 1
+  title:
+    en: "Handyman"
+    es: "Mantenimiento"
+  description:
+    en: "Reliable handyman services for general repairs, installations, and household maintenance to keep your space functioning perfectly."
+    es: "Servicios confiables de personal de mantenimiento para reparaciones generales, instalaciones y mantenimiento del hogar para mantener su espacio funcionando perfectamente."
+  icon: "https://firebasestorage.googleapis.com/v0/b/quicknhandy-ab215.appspot.com/o/categories%2Ficons%2Fhandyman-v3.png?alt=media&token=239ec73f-1c1a-48ae-a3a4-9f735a59d204"
+  price_hour_cents: 7000
+
+handy_ass:
+  title:
+    en: "Assembly"
+    es: "Ensamble"
+  description:
+    en: "We provide professional assembly services for furniture, appliances, and more, saving you time and effort."
+    es: "Brindamos servicios profesionales de ensamblaje de muebles, electrodomésticos y más, ahorrándole tiempo y esfuerzo."
+  icon: "https://firebasestorage.googleapis.com/v0/b/quicknhandy-ab215.appspot.com/o/categories%2Ficons%2Fassembly.png?alt=media&token=dcb959ad-665c-4891-8ef9-6057e831bb17"
+  price_hour_cents: 5200
+  ancestry: "1"

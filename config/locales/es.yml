@@ -1,0 +1,13 @@
+es:
+  api:
+    errors:
+      unauthorized: "No estas autorizado, por favor inicia sesión"
+      record_not_found: "No encontrado"
+      internal_server_error: "Error interno del servidor"
+      suspended: "Lo sentimos pero tuvimos que suspender tu cuenta"
+      user:
+        inactive: "Lo sentimos tu cuenta se encuentra inactiva"
+      not_coverage: "Lo sentimos actualmente no tenemos soporte en tu zona"
+      invalid_email_or_password: "Correo o contraseña inválidos"
+  errors:
+    translation_missing: "Traducción no encontrada"

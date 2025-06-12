@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the "{}" from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+
+martin_home:
+  address: "Carrera 29 #24 - 73"
+  tag: 0
+  lat: 3.448883
+  lon: -76.505069
+  description: "Casa esquinera amarilla"
+  user: martin
+  city: palmira

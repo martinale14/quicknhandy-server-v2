@@ -4,6 +4,9 @@ default: &default
   timeout: 5000
   username: <%= ENV.fetch("DATABASE_USER") %>
   password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  <% if ENV["GSSENCMODE"]  %>
+  gssencmode: <%= ENV["GSSENCMODE"]  %>
+  <% end %>
 
 development:
   primary:

@@ -1,0 +1,6 @@
+
+<% if field.attribute_name == :banner_image%>
+  <img class="!w-[200px]" src="<%= field.value(record) %>" alt="<%= field.value(record) %>" />
+<% else %>
+  <img class="!w-[50px]" src="<%= field.value(record) %>" alt="<%= field.value(record) %>" />
+<% end %>

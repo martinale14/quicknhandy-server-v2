@@ -1,0 +1,32 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+co_palmira:
+  code: co_palmira
+  enabled: true
+  city: palmira
+
+co_bogota:
+  code: co_bogota
+  enabled: true
+  city: bogota
+
+co_sogamoso:
+  code: co_sogamoso
+  enabled: true
+  city: sogamoso
+
+usa_new_york:
+  code: usa_new_york
+  enabled: true
+  city: new_york
+
+usa_miami:
+  code: usa_miami
+  enabled: true
+  city: miami
+
+usa_orlando:
+  code: usa_orlando
+  enabled: true
+  city: orlando
+
