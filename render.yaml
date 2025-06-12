@@ -16,10 +16,7 @@ services:
       - key: DATABASE_URL
         sync: false
       - key: REDIS_URL
-        fromService:
-          type: redis
-          name: redis
-          property: connectionString
+        sync: false
 
   - type: redis
     name: redis
