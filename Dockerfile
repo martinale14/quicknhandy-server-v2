@@ -49,8 +49,6 @@ RUN bundle exec bootsnap precompile app/ lib/
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 
-
-
 # Final stage for app image
 FROM base
 
@@ -64,8 +62,12 @@ RUN groupadd --system --gid 1000 rails && \
     chown -R rails:rails db log storage tmp
 USER 1000:1000
 
+RUN echo "HOLAAAAAAAAAAAAAAAAAAAAAAAAAAA2"
+
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+
+RUN echo "HOLAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 
 # Start server via Thruster by default, this can be overwritten at runtime
 EXPOSE 80
