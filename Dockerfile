@@ -66,5 +66,6 @@ USER 1000:1000
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
+ENV HTTP_PORT=$PORT
 EXPOSE 80
-CMD ["HTTP_PORT=$PORT", "./bin/thrust", "./bin/rails", "server"]
+CMD ["./bin/thrust", "./bin/rails", "server"]
