@@ -54,6 +54,8 @@ gem "securerandom", "~> 0.4.1"
 gem "stimulus-rails"
 
 gem "tailwindcss-rails", "~> 4.2", ">= 4.2.3"
+
+gem "tailwindcss-ruby", "~> 4.1", ">= 4.1.8"
 # Hotwire"s SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]

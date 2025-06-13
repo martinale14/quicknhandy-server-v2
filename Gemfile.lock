@@ -472,6 +472,7 @@ DEPENDENCIES
   solid_queue_dashboard (~> 0.2.0)
   stimulus-rails
   tailwindcss-rails (~> 4.2, >= 4.2.3)
+  tailwindcss-ruby (~> 4.1, >= 4.1.8)
   thruster
   turbo-rails
   tzinfo-data
