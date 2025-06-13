@@ -11,8 +11,8 @@ services:
     envVars:
       - key: RAILS_MASTER_KEY
         sync: false
-      - key: WEB_CONCURRENCY
-        value: 1
+#      - key: WEB_CONCURRENCY
+#        value: 1
       - key: DATABASE_URL
         sync: false
       - key: REDIS_URL
