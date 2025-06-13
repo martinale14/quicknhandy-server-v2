@@ -2,56 +2,61 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-#  username: <%#= ENV["DATABASE_USER"] %>
-#  password: <%#= ENV["DATABASE_PASSWORD"] %>
+  username: <%= ENV["DATABASE_USER"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   <% if ENV["GSSENCMODE"]  %>
   gssencmode: <%= ENV["GSSENCMODE"]  %>
   <% end %>
 
 development:
-  primary:
-    <<: *default
-    database: quicknhandy_dev
-  cache:
-    <<: *default
-    database: quicknhandy_cache_dev
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *default
-    database: quicknhandy_queue_dev
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *default
-    database: quicknhandy_cable_dev
-    migrations_paths: db/cable_migrate
+  <<: *default
+  database: quicknhandy_dev
+#  primary:
+#    <<: *default
+#    database: quicknhandy_dev
+#  cache:
+#    <<: *default
+#    database: quicknhandy_cache_dev
+#    migrations_paths: db/cache_migrate
+#  queue:
+#    <<: *default
+#    database: quicknhandy_queue_dev
+#    migrations_paths: db/queue_migrate
+#  cable:
+#    <<: *default
+#    database: quicknhandy_cable_dev
+#    migrations_paths: db/cable_migrate
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  primary:
-    <<: *default
-    database: quicknhandy_test
-  cache:
-    <<: *default
-    database: quicknhandy_cache_test
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *default
-    database: quicknhandy_queue_test
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *default
-    database: quicknhandy_cable_test
-    migrations_paths: db/cable_migrate
+  <<: *default
+  database: quicknhandy_test
+#  primary:
+#    <<: *default
+#    database: quicknhandy_test
+#  cache:
+#    <<: *default
+#    database: quicknhandy_cache_test
+#    migrations_paths: db/cache_migrate
+#  queue:
+#    <<: *default
+#    database: quicknhandy_queue_test
+#    migrations_paths: db/queue_migrate
+#  cable:
+#    <<: *default
+#    database: quicknhandy_cable_test
+#    migrations_paths: db/cable_migrate
 
 
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
-  primary:
-    <<: *default
-    database: quicknhandy_prod
+  <<: *default
+#  primary:
+#    <<: *default
+#    database: quicknhandy-db
 #  cache:
 #    <<: *default
 #    database: quicknhandy_cache
