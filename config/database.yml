@@ -2,8 +2,8 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: <%= ENV["DATABASE_USER"] %>
-  password: <%= ENV["DATABASE_PASSWORD"] %>
+#  username: <%#= ENV["DATABASE_USER"] %>
+#  password: <%#= ENV["DATABASE_PASSWORD"] %>
   <% if ENV["GSSENCMODE"]  %>
   gssencmode: <%= ENV["GSSENCMODE"]  %>
   <% end %>
@@ -52,15 +52,15 @@ production:
   primary:
     <<: *default
     database: quicknhandy_prod
-  cache:
-    <<: *default
-    database: quicknhandy_cache
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *default
-    database: quicknhandy_queue
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *default
-    database: quicknhandy_cable
-    migrations_paths: db/cable_migrate
+#  cache:
+#    <<: *default
+#    database: quicknhandy_cache
+#    migrations_paths: db/cache_migrate
+#  queue:
+#    <<: *default
+#    database: quicknhandy_queue
+#    migrations_paths: db/queue_migrate
+#  cable:
+#    <<: *default
+#    database: quicknhandy_cable
+#    migrations_paths: db/cable_migrate
