@@ -67,5 +67,7 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
 ENV HTTP_PORT=$PORT
+RUN echo "HTTP_PORT $PORT"
+RUN echo "HTTP_PORT $HTTP_PORT"
 EXPOSE 80
 CMD ["./bin/thrust", "./bin/rails", "server"]
