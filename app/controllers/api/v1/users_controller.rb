@@ -14,7 +14,15 @@ class Api::V1::UsersController < Api::V1::BaseController
       return render json: { error: e }, status: :unprocessable_entity
     end
 
-    render "api/v1/sessions/show", status: :created
+    render(
+      "api/v1/sessions/show",
+      locals: {
+        user: @user,
+        session: @session,
+        api_token: nil
+      },
+      status: :created
+    )
   end
 
   private
