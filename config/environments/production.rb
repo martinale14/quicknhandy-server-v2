@@ -48,7 +48,7 @@ Rails.application.configure do
 
   # Replace the default in-process memory cache store with a durable alternative.
   config.cache_store =  :redis_cache_store, {
-    url: ENV.fetch("REDIS_URL") { 5 } + "/0/cache",
+    url: ENV.fetch("REDIS_URL") { "" } + "/0/cache",
     expires_in: 90.minutes
   }
 
